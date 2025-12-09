@@ -1,0 +1,58 @@
+import { StateTaxInfo } from './types';
+
+export const US_STATES: StateTaxInfo[] = [
+  { name: 'Alabama', abbreviation: 'AL', baseRate: 0.04, hasNoIncomeTax: false },
+  { name: 'Alaska', abbreviation: 'AK', baseRate: 0, hasNoIncomeTax: true },
+  { name: 'Arizona', abbreviation: 'AZ', baseRate: 0.025, hasNoIncomeTax: false },
+  { name: 'Arkansas', abbreviation: 'AR', baseRate: 0.049, hasNoIncomeTax: false },
+  { name: 'California', abbreviation: 'CA', baseRate: 0.08, hasNoIncomeTax: false }, // High progressive
+  { name: 'Colorado', abbreviation: 'CO', baseRate: 0.044, hasNoIncomeTax: false },
+  { name: 'Connecticut', abbreviation: 'CT', baseRate: 0.05, hasNoIncomeTax: false },
+  { name: 'Delaware', abbreviation: 'DE', baseRate: 0.05, hasNoIncomeTax: false },
+  { name: 'Florida', abbreviation: 'FL', baseRate: 0, hasNoIncomeTax: true },
+  { name: 'Georgia', abbreviation: 'GA', baseRate: 0.0549, hasNoIncomeTax: false },
+  { name: 'Hawaii', abbreviation: 'HI', baseRate: 0.07, hasNoIncomeTax: false },
+  { name: 'Idaho', abbreviation: 'ID', baseRate: 0.058, hasNoIncomeTax: false },
+  { name: 'Illinois', abbreviation: 'IL', baseRate: 0.0495, hasNoIncomeTax: false },
+  { name: 'Indiana', abbreviation: 'IN', baseRate: 0.0315, hasNoIncomeTax: false },
+  { name: 'Iowa', abbreviation: 'IA', baseRate: 0.05, hasNoIncomeTax: false },
+  { name: 'Kansas', abbreviation: 'KS', baseRate: 0.05, hasNoIncomeTax: false },
+  { name: 'Kentucky', abbreviation: 'KY', baseRate: 0.04, hasNoIncomeTax: false },
+  { name: 'Louisiana', abbreviation: 'LA', baseRate: 0.04, hasNoIncomeTax: false },
+  { name: 'Maine', abbreviation: 'ME', baseRate: 0.06, hasNoIncomeTax: false },
+  { name: 'Maryland', abbreviation: 'MD', baseRate: 0.05, hasNoIncomeTax: false },
+  { name: 'Massachusetts', abbreviation: 'MA', baseRate: 0.05, hasNoIncomeTax: false },
+  { name: 'Michigan', abbreviation: 'MI', baseRate: 0.0425, hasNoIncomeTax: false },
+  { name: 'Minnesota', abbreviation: 'MN', baseRate: 0.07, hasNoIncomeTax: false },
+  { name: 'Mississippi', abbreviation: 'MS', baseRate: 0.05, hasNoIncomeTax: false },
+  { name: 'Missouri', abbreviation: 'MO', baseRate: 0.048, hasNoIncomeTax: false },
+  { name: 'Montana', abbreviation: 'MT', baseRate: 0.05, hasNoIncomeTax: false },
+  { name: 'Nebraska', abbreviation: 'NE', baseRate: 0.06, hasNoIncomeTax: false },
+  { name: 'Nevada', abbreviation: 'NV', baseRate: 0, hasNoIncomeTax: true },
+  { name: 'New Hampshire', abbreviation: 'NH', baseRate: 0, hasNoIncomeTax: true }, // Interest/Div only usually
+  { name: 'New Jersey', abbreviation: 'NJ', baseRate: 0.06, hasNoIncomeTax: false },
+  { name: 'New Mexico', abbreviation: 'NM', baseRate: 0.049, hasNoIncomeTax: false },
+  { name: 'New York', abbreviation: 'NY', baseRate: 0.06, hasNoIncomeTax: false },
+  { name: 'North Carolina', abbreviation: 'NC', baseRate: 0.045, hasNoIncomeTax: false },
+  { name: 'North Dakota', abbreviation: 'ND', baseRate: 0.02, hasNoIncomeTax: false },
+  { name: 'Ohio', abbreviation: 'OH', baseRate: 0.035, hasNoIncomeTax: false },
+  { name: 'Oklahoma', abbreviation: 'OK', baseRate: 0.0475, hasNoIncomeTax: false },
+  { name: 'Oregon', abbreviation: 'OR', baseRate: 0.08, hasNoIncomeTax: false },
+  { name: 'Pennsylvania', abbreviation: 'PA', baseRate: 0.0307, hasNoIncomeTax: false },
+  { name: 'Rhode Island', abbreviation: 'RI', baseRate: 0.04, hasNoIncomeTax: false },
+  { name: 'South Carolina', abbreviation: 'SC', baseRate: 0.06, hasNoIncomeTax: false },
+  { name: 'South Dakota', abbreviation: 'SD', baseRate: 0, hasNoIncomeTax: true },
+  { name: 'Tennessee', abbreviation: 'TN', baseRate: 0, hasNoIncomeTax: true },
+  { name: 'Texas', abbreviation: 'TX', baseRate: 0, hasNoIncomeTax: true },
+  { name: 'Utah', abbreviation: 'UT', baseRate: 0.0465, hasNoIncomeTax: false },
+  { name: 'Vermont', abbreviation: 'VT', baseRate: 0.06, hasNoIncomeTax: false },
+  { name: 'Virginia', abbreviation: 'VA', baseRate: 0.0575, hasNoIncomeTax: false },
+  { name: 'Washington', abbreviation: 'WA', baseRate: 0, hasNoIncomeTax: true },
+  { name: 'West Virginia', abbreviation: 'WV', baseRate: 0.04, hasNoIncomeTax: false },
+  { name: 'Wisconsin', abbreviation: 'WI', baseRate: 0.05, hasNoIncomeTax: false },
+  { name: 'Wyoming', abbreviation: 'WY', baseRate: 0, hasNoIncomeTax: true },
+];
+
+export const INVESTMENT_RETURN_RATE = 0.07; // 7% annual return (Market)
+export const BANK_RETURN_RATE = 0.0025; // 0.25% annual return (National Average)
+export const INFLATION_RATE = 0.025; // 2.5% inflation
