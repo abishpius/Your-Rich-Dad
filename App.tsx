@@ -123,7 +123,7 @@ const App: React.FC = () => {
     }
 
     // Final sanity check for rounding errors to ensure strict equality
-    const sum = Object.values(newAllocations).reduce((a, b) => a + b, 0);
+    const sum = (Object.values(newAllocations) as number[]).reduce((a, b) => a + b, 0);
     const error = netMonthlyIncome - sum;
     if (Math.abs(error) > 0.001) {
          // Apply tiny rounding error to savings

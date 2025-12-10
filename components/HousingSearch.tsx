@@ -170,6 +170,9 @@ export const HousingSearch: React.FC<Props> = ({ defaultLocation, monthlyBudget 
   const formatCurrency = (val: number) => 
     new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(val);
 
+  // Limit slider to 1x Monthly Payment (generous enough for extra principal)
+  const maxExtraSlider = monthlyPayment; 
+
   return (
     <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
@@ -356,7 +359,7 @@ export const HousingSearch: React.FC<Props> = ({ defaultLocation, monthlyBudget 
                          <input 
                             type="range" 
                             min="0" 
-                            max={monthlyPayment * 2} 
+                            max={maxExtraSlider} 
                             step="50"
                             value={extraPrincipal}
                             onChange={(e) => setExtraPrincipal(Number(e.target.value))}
@@ -364,8 +367,8 @@ export const HousingSearch: React.FC<Props> = ({ defaultLocation, monthlyBudget 
                         />
                          <div className="flex justify-between text-xs text-slate-400 mt-2">
                             <span>$0</span>
-                            <span>$500</span>
-                            <span>$1,000+</span>
+                            <span>{formatCurrency(maxExtraSlider / 2)}</span>
+                            <span>{formatCurrency(maxExtraSlider)}+</span>
                          </div>
                     </div>
 
